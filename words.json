@@ -1,0 +1,202 @@
+[
+  {
+    "word": "reduce",
+    "meaning": "azaltmak, eksiltmek",
+    "synonyms": [
+      "decrease",
+      "lessen",
+      "diminish",
+      "cut down"
+    ],
+    "sentences": [
+      {
+        "text": "We need to reduce the amount of plastic we use.",
+        "translation": "Kullandığımız plastik miktarını azaltmalıyız.",
+        "keyword": "reduce"
+      },
+      {
+        "text": "The new speed limit reduced accidents by half.",
+        "translation": "Yeni hız sınırı kazaları yarıya indirdi.",
+        "keyword": "reduce"
+      },
+      {
+        "text": "The medicine decreased his pain quickly.",
+        "translation": "İlaç ağrısını hızla azalttı.",
+        "keyword": "decrease"
+      }
+    ],
+    "image": "https://picsum.photos/seed/reduce/640/360"
+  },
+  {
+    "word": "increase",
+    "meaning": "artırmak, çoğaltmak",
+    "synonyms": [
+      "boost",
+      "raise",
+      "expand",
+      "amplify"
+    ],
+    "sentences": [
+      {
+        "text": "The company plans to increase salaries next year.",
+        "translation": "Şirket gelecek yıl maaşları artırmayı planlıyor.",
+        "keyword": "increase"
+      },
+      {
+        "text": "The sunshine boosted everyone's mood.",
+        "translation": "Güneş ışığı herkesin moralini yükseltti.",
+        "keyword": "boost"
+      }
+    ],
+    "image": "https://picsum.photos/seed/increase/640/360"
+  },
+  {
+    "word": "improve",
+    "meaning": "geliştirmek, iyileştirmek",
+    "synonyms": [
+      "enhance",
+      "refine",
+      "upgrade",
+      "ameliorate"
+    ],
+    "sentences": [
+      {
+        "text": "Reading books every day will improve your vocabulary.",
+        "translation": "Her gün kitap okumak kelime dağarcığını geliştirecek.",
+        "keyword": "improve"
+      }
+    ],
+    "image": "https://picsum.photos/seed/improve/640/360"
+  },
+  {
+    "word": "beautiful",
+    "meaning": "güzel, çok etkileyici",
+    "synonyms": [
+      "gorgeous",
+      "stunning",
+      "lovely",
+      "exquisite"
+    ],
+    "sentences": [
+      {
+        "text": "The view from the mountain top was absolutely beautiful.",
+        "translation": "Dağın tepesinden manzara gerçekten çok güzeldi.",
+        "keyword": "beautiful"
+      }
+    ],
+    "image": "https://picsum.photos/seed/beautiful/640/360"
+  },
+  {
+    "word": "happy",
+    "meaning": "mutlu, neşeli",
+    "synonyms": [
+      "joyful",
+      "cheerful",
+      "delighted",
+      "content"
+    ],
+    "sentences": [
+      {
+        "text": "I am so happy that you could join us tonight.",
+        "translation": "Bu akşam aramıza katılabildiğin için çok mutluyum.",
+        "keyword": "happy"
+      },
+      {
+        "text": "She looked cheerful all day long.",
+        "translation": "Bütün gün neşeli görünüyordu.",
+        "keyword": "cheerful"
+      }
+    ],
+    "image": "https://picsum.photos/seed/happy/640/360"
+  },
+  {
+    "word": "difficult",
+    "meaning": "zor, güç",
+    "synonyms": [
+      "challenging",
+      "tough",
+      "demanding",
+      "arduous"
+    ],
+    "sentences": [
+      {
+        "text": "It was difficult to find a parking spot downtown.",
+        "translation": "Şehir merkezinde park yeri bulmak zordu.",
+        "keyword": "difficult"
+      }
+    ],
+    "image": "https://picsum.photos/seed/difficult/640/360"
+  },
+  {
+    "word": "show",
+    "meaning": "göstermek, sergilemek",
+    "synonyms": [
+      "display",
+      "demonstrate",
+      "reveal",
+      "exhibit"
+    ],
+    "sentences": [
+      {
+        "text": "The gallery shows paintings from the 19th century.",
+        "translation": "Galeri 19. yüzyıldan tablolar sergiliyor.",
+        "keyword": "show"
+      }
+    ],
+    "image": "https://picsum.photos/seed/show/640/360"
+  },
+  {
+    "word": "big",
+    "meaning": "büyük, iri",
+    "synonyms": [
+      "huge",
+      "enormous",
+      "massive",
+      "colossal"
+    ],
+    "sentences": [
+      {
+        "text": "They bought a big house with a garden near the lake.",
+        "translation": "Göl kenarında bahçeli büyük bir ev satın aldılar.",
+        "keyword": "big"
+      }
+    ],
+    "image": "https://picsum.photos/seed/big/640/360"
+  },
+  {
+    "word": "important",
+    "meaning": "önemli, kritik",
+    "synonyms": [
+      "crucial",
+      "vital",
+      "essential",
+      "significant"
+    ],
+    "sentences": [
+      {
+        "text": "It is important to drink enough water every day.",
+        "translation": "Her gün yeterli su içmek önemlidir.",
+        "keyword": "important"
+      }
+    ],
+    "image": "https://picsum.photos/seed/important/640/360"
+  },
+  {
+    "word": "start",
+    "meaning": "başlamak, başlatmak",
+    "synonyms": [
+      "begin",
+      "commence",
+      "initiate",
+      "launch"
+    ],
+    "sentences": [
+      {
+        "text": "The concert will start at eight o'clock sharp.",
+        "translation": "Konser tam sekizde başlayacak.",
+        "keyword": "start"
+      }
+    ],
+    "image": "https://picsum.photos/seed/start/640/360"
+  }
+]
