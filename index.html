@@ -824,10 +824,19 @@ async function fetchSentence(){
     }
     if(!pair){toast('"'+word+'" için internetten uygun örnek cümle bulunamadı','warn');return}
     c.sentences=c.sentences||[];
-    c.sentences.push(pair);
+    const dup=c.sentences.some(s=>s.text===pair.text);
+    if(!dup)c.sentences.push(pair);
     persist();
     sentIdx=c.sentences.length-1;
-    toast('"'+word+'" için örnek cümle eklendi','ok');
+    let savedNote='';
+    if(location.protocol!=='file:'){
+      try{
+        const sr=await fetch('/api/save-sentence',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({word:c.word,pair})});
+        if(sr.ok){const sj=await sr.json();savedNote=sj.ok?" words.json'a kaydedildi":' (words.json kaydedilemedi)'}
+        else savedNote=' (words.json kaydedilemedi)';
+      }catch(_){savedNote=' (words.json kaydedilemedi)'}
+    }
+    toast('"'+word+'" için örnek cümle eklendi'+savedNote,dup?'warn':'ok');
   }catch(e){
     toast('Cümle alınamadı, internet bağlantısını kontrol et','err');
   }finally{

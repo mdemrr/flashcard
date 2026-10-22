@@ -133,6 +133,32 @@ def build_example(word):
     ], timeout=18)
 
 
+def save_sentence(word, pair):
+    path = os.path.join(BASE_DIR, 'words.json')
+    try:
+        with open(path, 'r', encoding='utf-8') as f:
+            data = json.load(f)
+    except Exception:
+        return False
+    entries = data if isinstance(data, list) else (data.get('cards') or []) if isinstance(data, dict) else []
+    target = next((e for e in entries if isinstance(e, dict) and str(e.get('word', '')).lower() == word.lower()), None)
+    if not target:
+        return False
+    sentences = target.setdefault('sentences', [])
+    if not isinstance(sentences, list):
+        sentences = target['sentences'] = []
+    text = str(pair.get('text', '')).strip()
+    if any(str(s.get('text', '')).strip() == text for s in sentences if isinstance(s, dict)):
+        return True
+    sentences.append({'text': text, 'translation': str(pair.get('translation', '')), 'keyword': str(pair.get('keyword', word))})
+    try:
+        with open(path, 'w', encoding='utf-8') as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        return True
+    except Exception:
+        return False
+
+
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=BASE_DIR, **kwargs)
@@ -141,6 +167,24 @@ class Handler(SimpleHTTPRequestHandler):
         self.send_header('Cache-Control', 'no-store')
         self.send_header('Access-Control-Allow-Origin', '*')
         super().end_headers()
+
+    def do_POST(self):
+        parsed = urllib.parse.urlparse(self.path)
+        if parsed.path == '/api/save-sentence':
+            try:
+                length = int(self.headers.get('Content-Length') or 0)
+                body = json.loads(self.rfile.read(length).decode('utf-8')) if length else {}
+                word = str(body.get('word') or '').strip()
+                pair = body.get('pair') or {}
+                if not word or not pair.get('text'):
+                    self.reply({'error': 'word and pair required'}, 400)
+                    return
+                ok = save_sentence(word, pair)
+                self.reply({'ok': ok})
+            except Exception:
+                self.reply({'error': 'bad request'}, 400)
+            return
+        self.reply({'error': 'not found'}, 404)
 
     def do_GET(self):
         parsed = urllib.parse.urlparse(self.path)
